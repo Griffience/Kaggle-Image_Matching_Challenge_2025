@@ -15,6 +15,7 @@ Reconstructing a 3D scene from a set of possibly related images is a core proble
 Online image collections are messy and often contain a mix of unrelated photos or visually similar images that confuse reconstruction models. For example, two nearly identical sides of a monument might be mistaken for the same view, or completely unrelated images (like a photo of a latte taken near a landmark) could accidentally be grouped together. Existing methods use GPS data or video sequences to help, but these aren't always available or reliable, making large-scale applications unreliable.
 This competition challenges you to identify which images should be grouped and which should be discarded in 3D scene reconstruction. This will improve Structure from Motion (SfM) techniques and help generate more accurate 3D models from diverse image collections.
 Your work could make crowdsourced images more useful for large-scale reconstructions, benefiting areas like urban planning and scientific research.
-> ​**赛事类型**：Featured Competition  
+> 
+> ​**赛事类型**：Research       
 > ​**技术方向**：图像识别
 
