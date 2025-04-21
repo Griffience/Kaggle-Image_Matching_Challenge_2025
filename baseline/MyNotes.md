@@ -25,8 +25,8 @@ kp2, des2 = orb.detectAndCompute(img2, None)
 bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
 matches = bf.match(des1, des2)
 
-# Sort matches by distance (lower distance = better match)
-matches = sorted(matches, key=lambda x: x.distance)
+# Sort matches by distance (lower distance = better match) 
+matches = sorted(matches, key=lambda x: x.distance) 
 
 # Draw matches
 match_img = cv2.drawMatches(img1, kp1, img2, kp2, matches[:50], None, flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
@@ -35,14 +35,15 @@ match_img = cv2.drawMatches(img1, kp1, img2, kp2, matches[:50], None, flags=cv2.
 ```
 
 
-### HOW ORB WORKS — STEP BY STEP
-1. Detect Keypoints using FAST
-ORB starts by finding keypoints in the image — these are places that stand out (like corners).
+### HOW ORB WORKS — STEP BY STEP   
 
-It uses an algorithm called FAST (Features from Accelerated Segment Test), which is super fast and efficient.
-2.Rank Keypoints with Harris Score
-Once ORB finds many keypoints, it ranks them using a method called the Harris corner measure — this helps ORB pick the most unique and stable points to work with.
+1.Detect Keypoints using FAST   
+ORB starts by finding keypoints in the image — these are places that stand out (like corners).     
+It uses an algorithm called FAST (Features from Accelerated Segment Test), which is super fast and efficient.   
+2.Rank Keypoints with Harris Score   
+Once ORB finds many keypoints, it ranks them using a method called the Harris corner measure — this helps ORB pick the most unique and stable points to work with.   
 
-### 什么是Harris角点计算方法？其中的k是什么？
+### 什么是Harris角点计算方法？其中的k是什么？ 
+<img src="img/Harris_k.png" width=50%>
 
 
