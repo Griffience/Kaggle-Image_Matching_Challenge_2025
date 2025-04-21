@@ -12,7 +12,7 @@
 
     - BRIEF 描述符：在主方向对齐后的邻域内，使用一系列二元灰度比较构建紧凑的二进制特征向量
    
-#### ORB使用
+#### ORB超级基础使用
 ```python
 # Initialize ORB detector
 orb = cv2.ORB_create()
@@ -32,4 +32,17 @@ matches = sorted(matches, key=lambda x: x.distance)
 match_img = cv2.drawMatches(img1, kp1, img2, kp2, matches[:50], None, flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
 
 #show match_img .......
-``` 
+```
+
+
+### HOW ORB WORKS — STEP BY STEP
+1. Detect Keypoints using FAST
+ORB starts by finding keypoints in the image — these are places that stand out (like corners).
+
+It uses an algorithm called FAST (Features from Accelerated Segment Test), which is super fast and efficient.
+2.Rank Keypoints with Harris Score
+Once ORB finds many keypoints, it ranks them using a method called the Harris corner measure — this helps ORB pick the most unique and stable points to work with.
+
+### 什么是Harris角点计算方法？其中的k是什么？
+
+
