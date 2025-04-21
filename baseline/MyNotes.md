@@ -44,6 +44,7 @@ It uses an algorithm called FAST (Features from Accelerated Segment Test), which
 Once ORB finds many keypoints, it ranks them using a method called the Harris corner measure — this helps ORB pick the most unique and stable points to work with.   
 
 ### 什么是Harris角点计算方法？其中的k是什么？ 
+<img src="img/Harris_Corner.png" width=50%>
 <img src="img/Harris_k.png" width=50%>
 
 
